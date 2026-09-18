@@ -30,6 +30,15 @@ a:hover{color:#fff}
 [id]{scroll-margin-top:4rem}
 .col{max-width:var(--measure)}
 
+/* 防雷帶 */
+.spoiler{background:#1b0f11;border-bottom:1px solid var(--seal-dim)}
+.spoiler .wrap{padding:.7rem 1.25rem}
+.spoiler p{margin:0;font-size:.9rem;color:#d7c6c2;max-width:52rem;line-height:1.7}
+.spoiler b{color:var(--seal);font-family:var(--serif);margin-right:.6em}
+.spoiler a{color:#fff}
+.stance{max-width:32rem;margin:0 0 1.8rem;font-size:1.02rem;line-height:1.85;
+  border-left:3px solid var(--vial);padding-left:1rem}
+
 /* 頁首 */
 nav{position:sticky;top:0;z-index:20;background:rgba(12,10,11,.92);
   backdrop-filter:blur(6px);border-bottom:1px solid var(--rule)}
@@ -177,6 +186,11 @@ footer a{color:var(--faint)}
 </head>
 <body>
 
+<div class="spoiler"><div class="wrap">
+  <p><b>防雷</b>這一頁從頭到尾都是劇透，包含真結局、每一個死法，以及最後那段回憶。
+  還沒玩過又打算自己玩的話，<a href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">先去玩一輪</a>，免登入，大概一小時。</p>
+</div></div>
+
 <nav><div class="wrap">
   <b>第九號病人</b>
   <a href="#about">這是什麼</a>
@@ -193,6 +207,8 @@ footer a{color:var(--faint)}
   <div class="wrap">
     <h1>第九號病人</h1>
     <p class="byline">視覺小說　作者 <b>QIYUN</b>　發表於 Larch 市集　第二屆創作者挑戰參賽作</p>
+    <p class="stance">做這一頁的理由只有一個：好作品應該更容易被看見。<br>
+    所以這裡讀得完整個故事，而每一節都留了回去玩的入口——配樂、演出、還有你自己選錯的那幾次，讀不出來。</p>
     <div class="file">
       <dl>
         <dt>姓名</dt><dd>不詳，同房的人叫他「阿布」</dd>
@@ -207,9 +223,9 @@ footer a{color:var(--faint)}
       </dl>
     </div>
     <div class="cta">
-      <a class="btn" href="#read">從頭讀</a>
-      <a class="btn ghost" href="#endings">先看結局</a>
-      <a class="btn ghost" id="play-link" href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">去 Larch 玩原作</a>
+      <a class="btn" id="play-link" href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">去 Larch 玩原作</a>
+      <a class="btn ghost" href="#read">讀故事</a>
+      <a class="btn ghost" href="#endings">看九個結局</a>
     </div>
   </div>
 </header>
@@ -218,12 +234,12 @@ footer a{color:var(--faint)}
 
 <section id="about">
   <h2>這是什麼</h2>
-  <p class="lede">一份給不打算玩遊戲的人看的讀本。</p>
+  <p class="lede">一份讀者做的收藏，順便讓沒空玩的人也看得完。</p>
   <div class="col">
     <p>《第九號病人》是一款跑在 Larch 平台上的視覺小說。你醒在一間偏鄉精神病院，不記得自己是誰；同房的人有的太熱情、有的太暴躁、有的自稱修仙宗主。玩下去會發現，這裡不是醫院。</p>
-    <p>原作要一直點、一直選，而且選錯就死。這一頁把整部作品攤平了：主線從頭到尾照順序讀下來，遇到分歧的地方停一下，想看別條路就展開，看完會告訴你那一條通到哪裡。九個結局的圖與走法另外列一份。</p>
-    <p>全作只有八千多字，讀完大約二十五分鐘，比自己玩一輪快。</p>
-    <p class="note">下面全部都是劇透，包括真結局。想自己玩的話，先去玩，<a href="#play">這裡有給玩家的提醒</a>。</p>
+    <p>它值得更多人看到。可是原作要一直點、一直選，而且選錯就死，所以有些人不會走到最後那段回憶。這一頁把整部作品攤平了：主線從頭到尾照順序讀下來，遇到分歧的地方停一下，想看別條路就展開，看完會告訴你那一條通到哪裡。九個結局的圖與走法另外列一份。</p>
+    <p>全作只有八千多字，讀完大約二十五分鐘。讀完覺得好看的話，<a href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">回去玩一輪</a>，按個喜歡、留一句話給作者。這一頁的字是死的，她做的那個會動、會唱、會在你選錯的時候把你弄死。</p>
+    <p class="note">再提醒一次：下面全部都是劇透。想自己玩就先去玩，<a href="#play">這裡有給玩家的提醒</a>。</p>
   </div>
 </section>
 
@@ -270,6 +286,7 @@ footer a{color:var(--faint)}
   <h2>想自己玩的人</h2>
   <div class="col">
     <p>原作在 <a href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">Larch 市集</a>，免登入就能玩。以下是讀完整份資料之後，覺得值得先知道的幾件事。</p>
+    <p>另外，作者說完整攻略她自己會在 2026 年 9 月 20 日放到原作頁的留言區。要最權威的那一份，去那裡。</p>
     <h3>道具要自己從背包點出來用</h3>
     <p>有幾張卡片上只寫著「點擊背包使用迴紋針1」，畫面不會自己往下走——那是要你按右上角的背包、選那件道具、按使用。全作有六件道具會這樣用：迴紋針兩支、手術刀、膠帶、李無憂的手指、李無憂的指紋。另外還有一件「李無憂的小金庫」，拿了就是拿了，不用使用。</p>
     <h3>三個小遊戲</h3>
