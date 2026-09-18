@@ -56,3 +56,5 @@ Larch 市集上的公開作品可以免登入拿到整份專案 JSON，這個站
 也不隸屬於作者或 Larch 平台。整理工具（`tools/`）與網站程式碼是 MIT。
 
 原作：<https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955>
+作者：<https://larch.ink/@qiyundream>
+參賽單元：<https://larch.ink/market?section=challenge&challenge=creator-challenge-2026-09>
