@@ -269,8 +269,10 @@ def main():
                     src, w, h = local(it["bg"])
                     if w:
                         it["bg"], it["bgw"], it["bgh"] = src, w, h
-                    else:   # 不是圖（作者有一張背景放的是 giphy 內嵌網址），不要當圖畫
-                        it.pop("bg")
+                    else:
+                        # 背景放的是影片（Cloudflare Stream 的內嵌網址），不能當圖畫。
+                        # 保險箱打開那一段就是這樣接的，站上改成標一格「這裡是影片」。
+                        it["video"] = it.pop("bg")
                 if (it.get("item") or {}).get("image"):
                     it["item"]["image"] = local(it["item"]["image"])[0]
         for e in data["endings"]:
