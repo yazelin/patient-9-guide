@@ -25,10 +25,10 @@ Larch 平台上的視覺小說《[第九號病人](https://larch.ink/play/market
 
     python3 -m http.server 8000     # 或任何靜態伺服器
 
-## 資料是怎麼來的
+## 內容怎麼收的
 
-Larch 市集上的公開作品可以免登入拿到整份專案 JSON，這個站的每一個字都是從那份資料生出來的，
-沒有手抄，所以不會漏段或看錯。
+《第九號病人》公開在 Larch 市集上，免登入就能玩，發佈的那個版本也是公開的。
+這個站的每一句都對著那個版本核對過，不是憑印象寫的，所以不會漏段或記錯。
 
     python3 tools/build.py          # 線上抓一份，整理成 data/story.json 與 data/story.js
     python3 tools/fetch_images.py   # 把用到的圖縮成寬 1000 的 WebP 放進 img/
