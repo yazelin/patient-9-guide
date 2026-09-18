@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第九號病人・讀本與全結局</title>
+<meta name="description" content="Larch 視覺小說《第九號病人》（作者 QIYUN）的完整讀本：不用玩也能從頭讀到尾，九個結局怎麼走、每個分歧點通往哪裡，全部攤開。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --void:#0c0a0b; --chart:#161113; --chart2:#1d1619; --rule:#3a2b2e;
+  --ink:#e6ded6; --faint:#9a8b86; --seal:#b02a35; --seal-dim:#7d1f27;
+  --vial:#83a99b; --focus:#d8b26a;
+  --serif:"Noto Serif TC",serif; --sans:"Noto Sans TC",system-ui,sans-serif;
+  --measure:34rem;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--void);color:var(--ink);font-family:var(--sans);
+  font-size:17px;line-height:1.85;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+a{color:var(--ink);text-decoration-color:var(--seal);text-underline-offset:.25em}
+a:hover{color:#fff}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+
+.wrap{max-width:58rem;margin:0 auto;padding:0 1.25rem}
+[id]{scroll-margin-top:4rem}
+.col{max-width:var(--measure)}
+
+/* 頁首 */
+nav{position:sticky;top:0;z-index:20;background:rgba(12,10,11,.92);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--rule)}
+nav .wrap{display:flex;gap:1.1rem;align-items:center;height:3rem;overflow-x:auto;scrollbar-width:none}
+nav .wrap::-webkit-scrollbar{display:none}
+nav b{font-family:var(--serif);font-weight:700;white-space:nowrap}
+nav a{font-size:.88rem;color:var(--faint);text-decoration:none;white-space:nowrap}
+nav a:hover{color:var(--ink)}
+
+/* 病歷首屏 */
+header{position:relative;border-bottom:1px solid var(--rule);overflow:hidden}
+header .art{position:absolute;inset:0;background-size:cover;background-position:center 28%;
+  filter:saturate(.85) brightness(.62)}
+header .art::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,rgba(12,10,11,.95) 0 34%,rgba(12,10,11,.55) 62%,rgba(12,10,11,.2) 100%)}
+header .wrap{position:relative;padding:3.5rem 1.25rem 3rem}
+h1{font-family:var(--serif);font-weight:900;font-size:clamp(2.6rem,9vw,4.6rem);
+  line-height:1.02;margin:0;letter-spacing:.02em}
+.byline{margin:.9rem 0 2rem;color:var(--faint);font-size:.95rem}
+.byline b{color:var(--ink);font-weight:500}
+.file{border:1px solid var(--rule);border-left:3px solid var(--seal);background:rgba(22,17,19,.82);
+  padding:1.1rem 1.25rem;max-width:30rem}
+.file dl{margin:0;display:grid;grid-template-columns:5.5rem 1fr;row-gap:.35rem;column-gap:1rem;font-size:.95rem}
+.file dt{color:var(--faint)}
+.file dd{margin:0}
+.file .sep{grid-column:1/-1;border-top:1px dashed var(--rule);margin:.5rem 0}
+.cta{margin-top:1.6rem;display:flex;gap:.9rem;flex-wrap:wrap;align-items:center}
+.btn{display:inline-block;padding:.6rem 1.15rem;border:1px solid var(--seal);
+  background:var(--seal-dim);color:#fff;text-decoration:none;font-weight:500;font-size:.95rem}
+.btn:hover{background:var(--seal)}
+.btn.ghost{background:transparent;border-color:var(--rule);color:var(--ink)}
+.btn.ghost:hover{border-color:var(--ink)}
+
+/* 區段 */
+section{padding:4rem 0 1rem;border-bottom:1px solid var(--rule)}
+section:last-of-type{border-bottom:0}
+h2{font-family:var(--serif);font-weight:700;font-size:1.9rem;margin:0 0 .4rem;line-height:1.3}
+h2 + .lede{color:var(--faint);margin:0 0 2rem;max-width:var(--measure)}
+h3{font-family:var(--serif);font-weight:700;font-size:1.2rem;margin:2.2rem 0 .6rem}
+p{margin:0 0 1.1rem}
+.note{color:var(--faint);font-size:.9rem}
+
+/* 人物 */
+.cast{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-bottom:1.5rem}
+@media(min-width:44rem){.cast{grid-template-columns:1fr 1fr}}
+.cast div{background:var(--chart);padding:1rem 1.15rem}
+.cast h4{margin:0 0 .3rem;font-family:var(--serif);font-size:1.05rem;font-weight:700}
+.cast p{margin:0;font-size:.93rem;color:var(--faint)}
+details.truth{border:1px solid var(--rule);background:var(--chart);padding:0 1.15rem;margin:1.5rem 0}
+details.truth summary{cursor:pointer;padding:.9rem 0;font-weight:500;list-style:none}
+details.truth summary::-webkit-details-marker{display:none}
+details.truth summary::before{content:"封存　";color:var(--seal);font-family:var(--serif)}
+details.truth[open] summary::before{content:"已拆封　"}
+details.truth .col{padding-bottom:.6rem}
+
+/* 讀本 */
+.tools{display:flex;gap:.75rem;flex-wrap:wrap;align-items:center;margin-bottom:2rem;
+  padding:.75rem 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.tools label{font-size:.9rem;color:var(--faint);display:flex;gap:.4rem;align-items:center;cursor:pointer}
+.toc{columns:2;column-gap:2rem;font-size:.92rem;margin:0 0 2.5rem;padding:0;list-style:none}
+@media(max-width:44rem){.toc{columns:1}}
+.toc li{margin-bottom:.3rem;break-inside:avoid}
+.toc a{color:var(--faint);text-decoration:none}
+.toc a:hover{color:var(--ink)}
+.toc span{color:var(--seal-dim);font-family:var(--serif)}
+
+#reader{max-width:46rem}
+#reader .line,#reader .fork,#reader .item,#reader .tag,#reader .endcard,#reader .chap,#reader .rejoin,#reader .says{max-width:var(--measure)}
+#reader .aside .line,#reader .aside .item,#reader .aside .tag{max-width:none}
+.chap{font-family:var(--serif);font-weight:700;font-size:1.45rem;margin:3.5rem 0 1.5rem;
+  padding-top:1.2rem;border-top:1px solid var(--rule)}
+.chap span{display:block;font-family:var(--sans);font-size:.78rem;font-weight:400;color:var(--seal);margin-bottom:.2rem}
+.line{margin:0 0 .95rem}
+.line .who{font-family:var(--serif);font-weight:700;color:var(--seal);margin-right:.5em}
+.line.narr{color:var(--faint);font-style:italic}
+.line.clue{border-left:2px solid var(--vial);padding-left:.8rem;color:#cfe0d8}
+figure{margin:1.8rem 0}
+figure img{width:100%;border:1px solid var(--rule)}
+.tag{display:inline-block;font-size:.8rem;color:var(--faint);border:1px dashed var(--rule);
+  padding:.15rem .6rem;margin:0 0 .95rem}
+.item{display:flex;gap:.75rem;align-items:center;border:1px solid var(--rule);
+  background:var(--chart);padding:.6rem .8rem;margin:0 0 1rem;font-size:.92rem}
+.item img{width:2.4rem;height:2.4rem;object-fit:contain;flex:none}
+.item b{font-weight:500}
+
+/* 分歧 */
+.says{border-left:2px solid var(--rule);padding:.15rem 0 .15rem .9rem;margin:0 0 1.1rem}
+.says .lbl{font-size:.8rem;color:var(--faint);margin:0 0 .3rem}
+.says ul{list-style:none;margin:0;padding:0}
+.says li{color:#cbbfb8;font-size:.95rem}
+.says li::before{content:"「";color:var(--faint)}
+.says li::after{content:"」";color:var(--faint)}
+.fork{border:1px solid var(--rule);border-top:2px solid var(--seal);background:var(--chart);
+  margin:1.8rem 0;padding:1rem 1.1rem}
+.fork .q{font-family:var(--serif);font-weight:700;margin:0 0 .75rem}
+.fork ul{list-style:none;margin:0;padding:0;display:grid;gap:.45rem}
+.fork li{display:flex;gap:.6rem;align-items:baseline;font-size:.95rem}
+.fork .mark{flex:none;width:1.1rem;color:var(--seal);font-family:var(--serif)}
+.fork .taken{color:var(--ink)}
+.fork .taken .mark{color:var(--seal)}
+.fork button{background:none;border:0;padding:0;margin:0;color:var(--vial);font:inherit;
+  font-size:.95rem;text-align:left;cursor:pointer;text-decoration:underline;
+  text-decoration-color:rgba(131,169,155,.45);text-underline-offset:.25em}
+.fork button:hover{color:#bcdccf}
+.fork .why{color:var(--faint);font-size:.85rem}
+.aside{border-left:2px solid var(--vial);background:var(--chart2);margin:.9rem 0 .2rem;
+  padding:1rem 1.1rem;}
+.aside > .lbl{font-size:.82rem;color:var(--vial);margin:0 0 .8rem}
+.rejoin{font-size:.88rem;color:var(--faint);border-top:1px dashed var(--rule);padding-top:.7rem;margin-top:.8rem}
+
+/* 結局卡 */
+.endcard{border:1px solid var(--seal-dim);background:linear-gradient(180deg,rgba(176,42,53,.10),transparent);
+  padding:1rem 1.1rem;margin:1.5rem 0}
+.endcard .kicker{font-size:.8rem;color:var(--seal);margin:0 0 .25rem}
+.endcard h4{font-family:var(--serif);font-size:1.25rem;margin:0 0 .5rem;font-weight:700}
+.endcard p{margin:0;font-size:.93rem;color:var(--faint)}
+.endcard img{margin-top:.9rem;border:1px solid var(--rule)}
+
+/* 結局一覽 */
+.ends{display:grid;gap:1.5rem;margin-top:2rem}
+@media(min-width:48rem){.ends{grid-template-columns:1fr 1fr}}
+.end{border:1px solid var(--rule);background:var(--chart)}
+.end img{width:100%;height:auto}
+.end .body{padding:1rem 1.15rem}
+.end h3{margin:0 0 .5rem;font-size:1.15rem}
+.end .num{color:var(--seal);font-family:var(--serif);margin-right:.5em}
+.end p{font-size:.93rem;margin:0 0 .8rem}
+.end ol{margin:0;padding-left:1.2rem;font-size:.88rem;color:var(--faint)}
+.end ol li{margin-bottom:.25rem}
+.end ol b{color:var(--ink);font-weight:500}
+.end ol .ctx{display:block;color:var(--faint)}
+.end ol li{margin-bottom:.55rem;line-height:1.6}
+.end.true{grid-column:1/-1;border-color:var(--seal-dim)}
+
+footer{padding:3rem 0 4rem;color:var(--faint);font-size:.9rem}
+footer a{color:var(--faint)}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <b>第九號病人</b>
+  <a href="#about">這是什麼</a>
+  <a href="#cast">人物</a>
+  <a href="#read">全文</a>
+  <a href="#endings">九個結局</a>
+  <a href="#play">想自己玩</a>
+  <a href="#colophon">整理說明</a>
+</div></nav>
+
+<header>
+  <div class="art" id="hero-art"></div>
+  <div class="wrap">
+    <h1>第九號病人</h1>
+    <p class="byline">視覺小說　作者 <b>QIYUN</b>　發表於 Larch 市集　第二屆創作者挑戰參賽作</p>
+    <div class="file">
+      <dl>
+        <dt>姓名</dt><dd>不詳，同房的人叫他「阿布」</dd>
+        <dt>編號</dt><dd>實驗體 009</dd>
+        <dt>入院</dt><dd>2014 年 9 月 27 日（採購紀錄的最後一筆）</dd>
+        <dt>主訴</dt><dd>醒來時失去記憶，想不起自己為什麼在這裡</dd>
+        <div class="sep"></div>
+        <dt>病歷頁數</dt><dd id="stat-nodes">422 張卡片</dd>
+        <dt>真正的分歧</dt><dd>13 處</dd>
+        <dt>結局</dt><dd>9 個</dd>
+        <dt>讀完約需</dt><dd>25 分鐘</dd>
+      </dl>
+    </div>
+    <div class="cta">
+      <a class="btn" href="#read">從頭讀</a>
+      <a class="btn ghost" href="#endings">先看結局</a>
+      <a class="btn ghost" id="play-link" href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">去 Larch 玩原作</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section id="about">
+  <h2>這是什麼</h2>
+  <p class="lede">一份給不打算玩遊戲的人看的讀本。</p>
+  <div class="col">
+    <p>《第九號病人》是一款跑在 Larch 平台上的視覺小說。你醒在一間偏鄉精神病院，不記得自己是誰；同房的人有的太熱情、有的太暴躁、有的自稱修仙宗主。玩下去會發現，這裡不是醫院。</p>
+    <p>原作要一直點、一直選，而且選錯就死。這一頁把整部作品攤平了：主線從頭到尾照順序讀下來，遇到分歧的地方停一下，想看別條路就展開，看完會告訴你那一條通到哪裡。九個結局的圖與走法另外列一份。</p>
+    <p>全作只有八千多字，讀完大約二十五分鐘，比自己玩一輪快。</p>
+    <p class="note">下面全部都是劇透，包括真結局。想自己玩的話，先去玩，<a href="#play">這裡有給玩家的提醒</a>。</p>
+  </div>
+</section>
+
+<section id="cast">
+  <h2>人物</h2>
+  <p class="lede">先照他們自我介紹的樣子列。</p>
+  <div class="cast">
+    <div><h4>阿布（你）</h4><p>新來的病人。說不出自己的名字，於是被李無憂叫成「阿布」。病歷上寫著很嚴重的病情，但他很確定自己沒病。</p></div>
+    <div><h4>李無憂</h4><p>第一個來打招呼的人，把病院稱作「我們小家庭」，跟護士很熟。所有人裡最客氣的一個。</p></div>
+    <div><h4>石妃妮</h4><p>室友，會用迴紋針開鎖。姐姐在半夜不見了，整部作品都在找她。</p></div>
+    <div><h4>石妃仁</h4><p>妮妮的姐姐。有巨物恐懼症，發作起來會在牆角扭曲地爬。</p></div>
+    <div><h4>甄時</h4><p>另一個室友。嫌床髒、嫌人吵，動手比說話快。</p></div>
+    <div><h4>龍傲天</h4><p>自稱合歡宗宗主，開口閉口「本座」，逢人就收徒。全作最吵，也最重要。</p></div>
+    <div><h4>護士</h4><p>帶你進病房、發藥、在你發作時打鎮定劑的人。數學不太好——她說三個人一間，房裡有六個人。</p></div>
+    <div><h4>贏黎清</h4><p>在最後才出場的人。你找到他的時候，他泡在地下室的培養罐裡。</p></div>
+  </div>
+
+  <details class="truth">
+    <summary>誰是真的？（真相，請自行決定要不要拆）</summary>
+    <div class="col">
+      <p>作者在作品的角色設定裡替每個人標了身分：<b>甄時、石妃仁、石妃妮</b> 後面都掛著「幻想」，<b>龍傲天</b> 掛的是「真人」。護士與李無憂沒有標，他們是真的。</p>
+      <p>正文裡也留了記號。你以為自己在群毆，龍傲天問的是「為什麼對著空氣揮拳」；甄時拿手術刀了結護士之後，李無憂喊的是：「實驗體009，你想起來了？你現在是誰？安寧？雙胞胎？甄時？」</p>
+      <p>孤兒院那一段給了名字的由來。八號與九號是龍鳳胎，被一對有錢夫妻領養之後仍然只有編號，於是八號替兩個人取了名字：她叫安妮，弟弟叫安寧。後來安寧騙妹妹上了貨車，自己留下來承受追查。「妮妮離開後，『朋友們』就出現了。」</p>
+      <p>房裡三張床要睡六個人，是因為其中三個不佔位子。</p>
+    </div>
+  </details>
+</section>
+
+<section id="read">
+  <h2>全文</h2>
+  <p class="lede">主線照順序排。分歧點會標出這一版走了哪一條，其他選項可以就地展開。</p>
+  <ul class="toc" id="toc"></ul>
+  <div id="reader"></div>
+</section>
+
+<section id="endings">
+  <h2>九個結局</h2>
+  <p class="lede">八個是在半路上停下來，一個走得完。每個結局在遊戲裡都只有一張圖，沒有台詞，所以下面寫的是圖上畫了什麼、以及怎麼走到那裡。</p>
+  <div class="ends" id="ends"></div>
+</section>
+
+<section id="play">
+  <h2>想自己玩的人</h2>
+  <div class="col">
+    <p>原作在 <a href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">Larch 市集</a>，免登入就能玩。以下是讀完整份資料之後，覺得值得先知道的幾件事。</p>
+    <h3>道具要自己從背包點出來用</h3>
+    <p>有幾張卡片上只寫著「點擊背包使用迴紋針1」，畫面不會自己往下走——那是要你按右上角的背包、選那件道具、按使用。全作有六件道具會這樣用：迴紋針兩支、手術刀、膠帶、李無憂的手指、李無憂的指紋。另外還有一件「李無憂的小金庫」，拿了就是拿了，不用使用。</p>
+    <h3>三個小遊戲</h3>
+    <p>床底找迴紋針那一關是手速挑戰，卡片前一句會提醒你準備。另外兩個分別在採集指紋與甄時對上李無憂的時候，其中一個可以按略過。</p>
+    <h3>會死的地方就那幾個</h3>
+    <p>大部分選項都是嘴上逞快，講什麼都接回同一句。真正會讓你走不下去的只有十三個分歧裡的八個，全部列在<a href="#endings">上面那份結局表</a>。想一次走到真結局，照那張表倒著看最快。</p>
+    <h3>存檔</h3>
+    <p>Larch 的存檔是手動的，在底欄。走到會分岔的地方先存一格，看完一個結局就讀回來，比從頭再來快得多。</p>
+  </div>
+</section>
+
+<section id="colophon">
+  <h2>這份整理是怎麼來的</h2>
+  <div class="col">
+    <p>Larch 市集上的公開作品可以用一個網址把整份專案資料拿下來，包含每一張卡片的文字、每一條連線、以及連線上的條件。這一頁的內容全部從那份資料生出來，沒有一句是手抄的，所以不會有漏掉或看錯的段落。</p>
+    <p>做法是把 422 張卡片與 524 條連線還原成一張圖，從開場卡開始走：能一路直走的就接下去，遇到一個出口接多張卡的地方就是分歧。每張卡只會被放進一個段落，因此上面那份全文剛好把作品讀完一次，不多也不少。<span id="stat-line"></span></p>
+    <p>結局的走法是從開場卡到那張結局卡的最短路徑，再逐一檢查路上的每個選擇：如果其他選項也走得到同一個結局，那個選擇就不是關鍵，表上不列。所以表上列出來的每一步都是非這樣選不可。</p>
+    <h3>順手記下的兩件事</h3>
+    <p>版子上有一張空的對話卡沒有接進任何路線，內容還是編輯器的預設字「在這裡輸入對話內容…」，玩的時候走不到。另外角色清單裡有一位「陳悟」，標了幻想，但全作的台詞裡一次都沒有出現。</p>
+    <h3>圖</h3>
+    <p>作品的插圖原檔一張約 2 MB、五十幾張超過 100 MB。這一頁放的是縮到寬 1000 的副本，免得讀者與作者的圖床一起受累。原始網址都記在 <code>img/sources.json</code>。</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <p>《第九號病人》的故事、角色與全部插圖版權屬於原作者 QIYUN。這裡是一份讀者整理的讀本與攻略，不是原作，也不隸屬於作者或 Larch 平台。<br>
+  原作在這裡：<a href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">larch.ink／第九號病人</a>　作者：<a href="https://larch.ink" target="_blank" rel="noopener">QIYUN</a></p>
+  <p>資料取自作品的公開發佈快照，整理工具與原始碼放在同一個 repo。</p>
+</footer>
+
+<script src="data/story.js"></script>
+<script>
+(function(){
+  var S = window.STORY;
+  if(!S){document.getElementById('reader').textContent='讀不到 data/story.js，請先跑 tools/build.py。';return;}
+  var segs = {}; S.segments.forEach(function(s){segs[s.id]=s;});
+
+  document.getElementById('hero-art').style.backgroundImage = 'url("'+S.meta.cover+'")';
+  document.getElementById('stat-nodes').textContent = S.meta.nodeCount + ' 張卡片';
+  document.getElementById('stat-line').textContent =
+    '（' + S.stats.claimed + ' 張卡片全部落在主線或某一條支線上。）';
+
+  // 章節：手選的段落起點
+  var CHAPTERS = [
+    ['scene-45083618','入院'],
+    ['scene-8b096d0d','午餐，還有一位宗主'],
+    ['scene-c37c221e','石妃仁發作'],
+    ['scene-e56bcfe3','鎮定劑'],
+    ['scene-4114234c','半夜，姐姐不見了'],
+    ['scene-cf738c89','檔案室裡的病歷'],
+    ['scene-93ba4b8a','保險箱'],
+    ['scene-5d6a6052','隔日：要怎麼拿到指紋'],
+    ['scene-0d3697f3','保險箱裡面是什麼'],
+    ['scene-5225daa6','書架旁的暗門'],
+    ['scene-b5c8cf22','培養罐裡的人'],
+    ['scene-c84d46a6','天窗'],
+    ['scene-45e5ebca','八號與九號']
+  ];
+  function chapterOf(id){
+    for(var i=0;i<CHAPTERS.length;i++){
+      if(id.indexOf(CHAPTERS[i][0]) === 0) return [i+1, CHAPTERS[i][1]];
+    }
+    return null;
+  }
+
+  var ENDINGS = {
+    'scene-bb4fee31-6d05-447d-9fc1-e59c729599ba':{
+      n:'親傳弟子',
+      d:'你答應加入合歡宗。龍傲天咬破你的手指，要你在他掌心蓋一個手印，從此你是他的人。畫面停在他把你抱在懷裡的那一格，背景是 101 號房。'},
+    'scene-61837568-77d2-48ee-968f-934d4a46427a':{
+      n:'替天行道',
+      d:'你說本座是狗，還說他跟你家小黃一樣。他說今日吾將以先輩之道引下神罰。畫面是他提著一把滴血的長刀站在燭火通明的大廳裡。'},
+    'scene-ed71b6d9-cc64-4d46-b682-dfb38015c722':{
+      n:'今晚不出門',
+      d:'石妃妮求你陪她去找姐姐，你說不要，我要睡覺。畫面是一張空著的病床，天亮了，故事沒有繼續。'},
+    'scene-e1731422-e5fa-46e1-96b4-18c92f7857e7':{
+      n:'檔案室裡的一句玩笑',
+      d:'半夜的檔案室冷得要命，你叫石妃妮把衣服脫下來給你穿。畫面切到檔案室的走道，地上趴著一個人。'},
+    'scene-7207f660-7a37-441d-a98b-022b3535dbec':{
+      n:'世上最美的人',
+      d:'你認定保險箱是龍傲天的，於是騙他說裡面是上古尊者遺跡，要世界上最美的人才解得開。鎖沒開，他無法接受自己不是。'},
+    'scene-f9a4fa14-4d00-4b5f-b025-3a641c4bc82e':{
+      n:'護士的針',
+      d:'你認定保險箱是護士的，直接去問她知不知道檔案室的事。她一句話沒說，神情慌張地把你迷暈了。'},
+    'scene-8140e1b5-44a3-402b-a270-851af0caffde':{
+      n:'請他本人解鎖',
+      d:'你決定去找李無憂，請他自己打開保險箱。他說：看來計畫要提前了。然後很可惜地把你迷暈。'},
+    'scene-e45d0cd8-8da9-4990-aefd-701be9fefc4f':{
+      n:'少了一個人',
+      d:'龍傲天撞見你們在撕膠帶，你選擇不告訴他。畫面是空無一人的長廊——後面那段要靠他才走得下去。'},
+    'scene-96122423-6d3a-4f2a-9a98-20b103d55e05':{
+      n:'Happy Ending：009 的故事還沒結束',
+      d:'保險箱開了，裡面是實驗體 009 的紀錄，也就是你自己的。書架旁有暗門，暗門後面是培養罐與實驗紀錄：預計安放人格「石妃妮」。你帶著贏黎清、龍傲天與那筆錢從天窗離開，回憶跟著回來——孤兒院的八號與九號，安妮與安寧。最後一張圖是續作預告，上面寫著完整版製作計畫。拿指紋那一步有兩條路都走得到這裡：找機會拿到李無憂的手指（甄時會出手），或是用膠帶採集指紋——走膠帶那條的話，龍傲天問你在做什麼的時候一定要告訴他，瞞著他就會停在第八個結局。'}
+  };
+
+  var NAMES = ['李無憂','石妃妮','石妃仁','甄時','龍傲天','護士','贏黎清','玩家','阿布','？？？','???'];
+  var NAME_RE = new RegExp('^(' + NAMES.map(function(n){
+    return n.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  }).join('|') + ')\\s*[：:]\\s*([\\s\\S]*)$');
+
+  function el(tag, cls, text){
+    var e = document.createElement(tag);
+    if(cls) e.className = cls;
+    if(text != null) e.textContent = text;
+    return e;
+  }
+
+  function renderLine(raw){
+    var parts = String(raw).split('\n');
+    var frag = document.createDocumentFragment();
+    parts.forEach(function(t){
+      t = t.trim();
+      if(!t) return;
+      if(t.charAt(0) === '「'){
+        frag.appendChild(el('p','line clue',t));
+        return;
+      }
+      var m = t.match(NAME_RE) || t.match(/^([^：:（）()「」，。！？,.!?\s]{1,6})\s*[：:]\s*([\s\S]*)$/);
+      if(m && NAMES.indexOf(m[1]) >= 0){
+        var p = el('p','line');
+        p.appendChild(el('span','who',m[1]));
+        p.appendChild(document.createTextNode(m[2]));
+        frag.appendChild(p);
+        return;
+      }
+      var c = t.charAt(0);
+      frag.appendChild(el('p', (c === '(' || c === '（') ? 'line narr' : 'line', t));
+    });
+    return frag;
+  }
+
+  var lastBg = null, seenBg = {};
+
+  function renderNode(node, host){
+    var ch = chapterOf(node.id);
+    if(ch){
+      var h = el('h3','chap');
+      h.id = 'chap-' + ch[0];
+      h.appendChild(el('span', null, '第 ' + ch[0] + ' 段'));
+      h.appendChild(document.createTextNode(ch[1]));
+      host.appendChild(h);
+    }
+    if(node.bg && node.bg !== lastBg && !seenBg[node.bg]){
+      lastBg = node.bg; seenBg[node.bg] = 1;
+      var fig = el('figure');
+      var img = el('img');
+      img.src = node.bg; img.loading = 'lazy'; img.decoding = 'async'; img.alt = '';
+      if(node.bgw){ img.width = node.bgw; img.height = node.bgh; }
+      fig.appendChild(img);
+      host.appendChild(fig);
+    }
+    if(node.kind === 'miniGame'){
+      host.appendChild(el('p','tag','這裡有一個小遊戲'));
+    }
+    if(node.item){
+      var it = el('div','item');
+      if(node.item.image){
+        var im = el('img'); im.src = node.item.image; im.loading='lazy'; im.alt=''; it.appendChild(im);
+      }
+      var txt = el('div');
+      txt.appendChild(el('b', null, '取得道具：' + node.item.name));
+      txt.appendChild(el('div','note', node.item.keep ? '拿了就一直帶著' : '用掉就沒了'));
+      it.appendChild(txt);
+      host.appendChild(it);
+    }
+    (node.lines || []).forEach(function(l){ host.appendChild(renderLine(l)); });
+    if(node.kind === 'choice' && node.choices && node.choices.length){
+      var says = el('div','says');
+      says.appendChild(el('p','lbl', node.choices.length > 1 ? '你可以說（都接到同一句）' : '你說'));
+      var ul = el('ul');
+      node.choices.forEach(function(c){ ul.appendChild(el('li', null, c)); });
+      says.appendChild(ul);
+      host.appendChild(says);
+    }
+  }
+
+  function renderEndCard(nodeId, host){
+    var info = ENDINGS[nodeId];
+    var box = el('div','endcard');
+    box.appendChild(el('p','kicker','結局'));
+    box.appendChild(el('h4', null, info ? info.n : '結局'));
+    if(info) box.appendChild(el('p', null, info.d));
+    var e = S.endings.filter(function(x){return x.node === nodeId;})[0];
+    if(e && e.image){
+      var img = el('img'); img.src = e.image; img.loading='lazy'; img.alt='';
+      if(e.imgw){ img.width = e.imgw; img.height = e.imgh; }
+      box.appendChild(img);
+    }
+    host.appendChild(box);
+  }
+
+  function renderSegment(seg, host, isMain){
+    seg.body.forEach(function(item, i){
+      if(item.kind === 'branch'){ renderFork(item.branch, host); return; }
+      var nxt = seg.body[i+1];
+      // 分歧點的選擇卡由分歧區塊自己印，不要重複一次
+      if(nxt && nxt.kind === 'branch' && nxt.branch.node === item.id) return;
+      renderNode(item, host);
+    });
+    var end = seg.end || {};
+    if(end.kind === 'ending'){
+      renderEndCard(end.node, host);
+    } else if(end.kind === 'rejoin' && !isMain){
+      host.appendChild(el('p','rejoin','這條路在這裡跟主線接回同一張卡，後面一樣。'));
+    }
+  }
+
+  function renderFork(branch, host){
+    var box = el('div','fork');
+    box.appendChild(el('p','q', branch.prompt));
+    var ul = el('ul');
+    branch.options.forEach(function(opt){
+      var li = el('li');
+      if(opt.main){
+        li.className = 'taken';
+        li.appendChild(el('span','mark','■'));
+        var d = el('div');
+        d.appendChild(document.createTextNode(opt.label));
+        d.appendChild(el('span','why','　（下面接的是這一條）'));
+        li.appendChild(d);
+      } else {
+        li.appendChild(el('span','mark','□'));
+        var wrapDiv = el('div');
+        var sub = segs[opt.seg];
+        if(opt.rejoin || !sub){
+          wrapDiv.appendChild(document.createTextNode(opt.label));
+          wrapDiv.appendChild(el('span','why','　（走到同一個地方）'));
+        } else {
+          var ends = sub.end && sub.end.kind === 'ending';
+          var btn = el('button', null, opt.label);
+          btn.appendChild(el('span','why', ends ? '　展開這條（會結束）' : '　展開這條'));
+          btn.addEventListener('click', function(){
+            if(btn.dataset.open){
+              var nx = li.nextSibling;
+              if(nx && nx.classList && nx.classList.contains('aside')) nx.remove();
+              delete btn.dataset.open;
+              btn.lastChild.textContent = ends ? '　展開這條（會結束）' : '　展開這條';
+              return;
+            }
+            var box2 = el('div','aside');
+            box2.appendChild(el('p','lbl','如果選「' + opt.label + '」'));
+            var keep = lastBg;
+            renderSegment(sub, box2, false);
+            lastBg = keep;
+            li.parentNode.insertBefore(box2, li.nextSibling);
+            btn.dataset.open = '1';
+            btn.lastChild.textContent = '　收起來';
+          });
+          wrapDiv.appendChild(btn);
+        }
+        li.appendChild(wrapDiv);
+      }
+      ul.appendChild(li);
+    });
+    box.appendChild(ul);
+    host.appendChild(box);
+  }
+
+  // 主線
+  var reader = document.getElementById('reader');
+  renderSegment(segs.s0, reader, true);
+
+  // 目錄
+  var toc = document.getElementById('toc');
+  CHAPTERS.forEach(function(c,i){
+    if(!document.getElementById('chap-'+(i+1))) return;
+    var li = el('li');
+    var a = el('a');
+    a.href = '#chap-' + (i+1);
+    a.appendChild(el('span', null, (i+1) + '　'));
+    a.appendChild(document.createTextNode(c[1]));
+    li.appendChild(a);
+    toc.appendChild(li);
+  });
+
+  // 結局一覽
+  var ends = document.getElementById('ends');
+  S.endings.forEach(function(e, i){
+    var info = ENDINGS[e.node] || {n:'結局', d:''};
+    var isTrue = e.node === S.meta.trueEnding;
+    var card = el('div','end' + (isTrue ? ' true' : ''));
+    if(e.image){
+      var img = el('img'); img.src = e.image; img.loading='lazy'; img.alt='';
+      if(e.imgw){ img.width = e.imgw; img.height = e.imgh; }
+      card.appendChild(img);
+    }
+    var body = el('div','body');
+    var h = el('h3');
+    h.appendChild(el('span','num', String(i+1)));
+    h.appendChild(document.createTextNode(info.n));
+    body.appendChild(h);
+    body.appendChild(el('p', null, info.d));
+    var steps = e.steps.filter(function(s){return s.decisive;});
+    if(steps.length){
+      body.appendChild(el('p','note','非這樣選不可的步驟：'));
+      var ol = el('ol');
+      steps.forEach(function(s){
+        var li = el('li');
+        if(s.context){
+          var c = s.context.replace(/\s+/g,' ');
+          if(c.length > 34) c = c.slice(0,34) + '…';
+          li.appendChild(el('span','ctx', c));
+        }
+        var b = el('b', null, '選「' + s.choice + '」');
+        li.appendChild(b);
+        if(s.also && s.also.length){
+          li.appendChild(el('span','ctx', '選「' + s.also.join('」或「') + '」也可以'));
+        }
+        ol.appendChild(li);
+      });
+      body.appendChild(ol);
+    } else {
+      body.appendChild(el('p','note','沒有非選不可的步驟：這個結局有兩個入口，對龍傲天說「嗚嗚嗚哥哥壞」，或是後面直接答應加入合歡宗，都會走到。'));
+    }
+    card.appendChild(body);
+    ends.appendChild(card);
+  });
+})();
+</script>
+</body>
+</html>
