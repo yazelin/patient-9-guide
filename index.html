@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>第九號病人・讀本與全結局</title>
+<title>三張床，六個人｜《第九號病人》讀本與全結局</title>
 <meta name="description" content="Larch 視覺小說《第九號病人》（作者 QIYUN）的完整讀本：不用玩也能從頭讀到尾，九個結局怎麼走、每個分歧點通往哪裡，全部攤開。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,6 +41,12 @@ a:hover{color:#fff}
 .stance{max-width:32rem;margin:0 0 1.4rem;font-size:1.02rem;line-height:1.85;color:#d6ccc5}
 .stance a{color:#fff}
 .cta-lead{margin:0 0 2.6rem}
+.hero-toc{list-style:none;margin:1.6rem 0 0;padding:0;max-width:30rem;
+  border-top:1px solid var(--rule)}
+.hero-toc li{border-bottom:1px solid var(--rule)}
+.hero-toc a{display:block;padding:.5rem 0;color:var(--ink);text-decoration:none;font-size:.95rem}
+.hero-toc a:hover{color:#fff}
+.hero-toc span{display:inline-block;width:1.6rem;color:var(--seal);font-family:var(--serif)}
 .hook{margin:0 0 2.6rem;padding:1rem 0 1rem 1.1rem;border-left:3px solid var(--seal);max-width:33rem}
 .hook .hq{font-family:var(--serif);font-size:1.05rem;line-height:1.85;margin:0 0 .6rem;color:var(--ink)}
 .hook .hn{margin:0;color:var(--faint);font-size:.95rem}
@@ -189,6 +195,19 @@ figure img{width:100%;border:1px solid var(--rule)}
 .end ol li{margin-bottom:.55rem;line-height:1.6}
 .end.true{grid-column:1/-1;border-color:var(--seal-dim)}
 
+.drawer{border:1px solid var(--rule);background:var(--chart);padding:1.1rem 1.25rem;margin:0 0 1.2rem;max-width:44rem}
+.drawer h3{margin:0 0 .6rem;font-size:1.1rem}
+.drawer p{margin:0 0 .8rem;font-size:.97rem}
+.drawer p:last-child{margin-bottom:0}
+.drawer .clue{border-left:2px solid var(--vial);padding-left:.9rem;color:#cfe0d8;font-size:.92rem}
+.payoff{border-left:3px solid var(--seal);padding-left:1rem;margin-top:1.6rem;max-width:var(--measure)}
+.tl{list-style:none;margin:0 0 1rem;padding:0;max-width:44rem;counter-reset:tl}
+.tl li{position:relative;padding:0 0 1.2rem 1.4rem;border-left:1px solid var(--rule);font-size:.97rem}
+.tl li::before{content:"";position:absolute;left:-4px;top:.65em;width:7px;height:7px;
+  background:var(--seal);border-radius:50%}
+.tl li:last-child{border-left-color:transparent}
+.tl b{display:block;font-family:var(--serif);color:var(--ink);margin-bottom:.15rem}
+.tl .src{display:block;color:var(--faint);font-size:.82rem;margin-top:.25rem}
 .playline{border-left:3px solid var(--seal);padding:.2rem 0 .2rem .9rem;margin:0 0 1rem}
 .playline a{text-decoration-thickness:1px}
 .readend{border:1px solid var(--seal-dim);background:linear-gradient(180deg,rgba(176,42,53,.12),transparent);
@@ -210,7 +229,9 @@ footer a{color:var(--faint)}
   <a href="#about">這是什麼</a>
   <a href="#cast">人物</a>
   <a href="#read">全文</a>
+  <a href="#drawers">三個抽屜</a>
   <a href="#endings">九個結局</a>
+  <a href="#timeline">009 的一生</a>
   <a href="#play">想自己玩</a>
   <a href="#thoughts">感想</a>
   <a href="#colophon">資料來源</a>
@@ -245,11 +266,17 @@ footer a{color:var(--faint)}
         <dt>讀完約需</dt><dd>25 分鐘</dd>
       </dl>
     </div>
-    <div class="cta">
-      <a class="btn ghost" href="#read">讀故事</a>
-      <a class="btn ghost" href="#endings">看九個結局</a>
-      <a class="btn ghost" href="#thoughts">讀完之後的感想</a>
-    </div>
+    <ol class="hero-toc">
+      <li><a href="#about"><span>1</span>這是一款什麼樣的作品</a></li>
+      <li><a href="#cast"><span>2</span>你會遇到的人</a></li>
+      <li><a href="#read"><span>3</span>全文：從入院到天窗</a></li>
+      <li><a href="#drawers"><span>4</span>檔案室的三個抽屜</a></li>
+      <li><a href="#endings"><span>5</span>九個結局</a></li>
+      <li><a href="#timeline"><span>6</span>把 009 的一生拼回去</a></li>
+      <li><a href="#play"><span>7</span>想自己玩的人</a></li>
+      <li><a href="#thoughts"><span>8</span>讀完之後的感想</a></li>
+      <li><a href="#colophon"><span>9</span>資料來源與授權</a></li>
+    </ol>
   </div>
 </header>
 
@@ -299,15 +326,65 @@ footer a{color:var(--faint)}
   <div id="reader"></div>
 </section>
 
+
+<section id="drawers">
+  <h2><span class="sn">4</span>檔案室的三個抽屜</h2>
+  <p class="lede">石妃妮問你要搜哪邊：辦公桌、書架、小隔間。你只能挑一個，挑完就接回同一條路——所以玩一輪，你手上永遠只有三分之一的線索。三個抽屜的內容都在下面。</p>
+
+  <div class="drawer">
+    <h3>辦公桌：一疊病歷</h3>
+    <p>最上面那份寫著 2012 年。往下翻是龍傲天的——他殺過人。再往下，這鬼地方連小孩也收；判過刑的人多到你開始想，自己每天晚上跟幾個殺人犯睡同一間房。</p>
+    <p>最後一份是你自己的。你的名字裡沒有「布」，病情寫得很嚴重。石妃妮把整疊翻完，沒有她姐姐的，也沒有她自己的。</p>
+    <p class="clue">這條路會讓你列五個疑點：記憶、李無憂、病歷、昏迷、名字。最後那個是「為何自己下意識逃避回答名字？」</p>
+  </div>
+
+  <div class="drawer">
+    <h3>書架：兩本筆記</h3>
+    <p>醫學書裡夾著遺傳學與生物學，這兩本的筆記特別多。核心是拿主體細胞去做分裂實驗，繼承優秀基因、確保穩定。石妃妮鬆一口氣，因為這代表她姐姐如果被抓走，人應該還活著。</p>
+    <p>筆記的主人姓李，名字是李長樂。</p>
+    <p class="clue">這條路的疑點有四個：遺傳學、生物筆記、李長樂、李無憂。「筆記主人姓李…跟李無憂會有關係嗎？」</p>
+  </div>
+
+  <div class="drawer">
+    <h3>小隔間：照片、採購紀錄，還有一樣東西</h3>
+    <p>角落有一隻眼熟的兔子玩偶，旁邊一張小孩的照片，石妃妮一眼認出那是李無憂小時候。再往裡是一份採購紀錄，品項寫著實驗品，最後一筆的日期是 2014 年 9 月 27 日，跟你入院的時間幾乎重疊。</p>
+    <p>最後那樣東西石妃妮看一眼就叫你收起來。那是人體的一部分。</p>
+    <p class="clue">這條路沒有列疑點，石妃妮直接把話說完了：「我們是…豬仔？那姐姐她…」</p>
+  </div>
+
+  <p class="col payoff">三個抽屜要合起來看，才看得出這家人姓什麼：筆記的主人姓李，房間角落擺著李無憂小時候的兔子，而那個保險箱最後是用李無憂的指紋打開的。</p>
+</section>
+
 <section id="endings">
-  <h2><span class="sn">4</span>九個結局</h2>
+  <h2><span class="sn">5</span>九個結局</h2>
   <p class="lede">八個是在半路上停下來，一個走得完。九個結局在遊戲裡都用一張圖收尾，所以下面寫的是圖上畫了什麼、以及怎麼走到那裡。</p>
   <p class="playline"><a href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">九個結局的圖在原作裡是自己走出來的，去 Larch 玩一輪</a></p>
   <div class="ends" id="ends"></div>
 </section>
 
+
+<section id="timeline">
+  <h2><span class="sn">6</span>把 009 的一生拼回去</h2>
+  <p class="lede">作品沒有按順序講他的故事。檔案室的紙、保險箱裡的記憶、地下室的實驗紀錄、還有結局之後那段回憶，拼起來是這樣。每一條後面是它出現在哪裡。</p>
+  <ol class="tl">
+    <li><b>孤兒院</b>八號與九號是龍鳳胎。孤兒院的孩子都很認真讀書，因為沒有家長喜歡笨孩子；他們兩個為了一起被帶走，每次都拿滿分。<span class="src">結局後的回憶</span></li>
+    <li><b>被領養</b>一對穿著華貴的夫妻把他們接走，卻繼續叫他們八號、九號。八號說沒關係，我們自己取：她叫安妮，弟弟叫安寧，寓意平平淡淡安寧地過完一生。<span class="src">結局後的回憶</span></li>
+    <li><b>在「家」的日子</b>兩個人只能睡地板，身上遍佈傷口才吃得上一口飯。保險箱裡他自己的記錄寫得更短：沒有水沒有食物，只有無盡的恐懼。<span class="src">結局後的回憶／保險箱</span></li>
+    <li><b>那個特殊的日子</b>夫妻留下一張沒有難度的考卷，出門幾天。安寧撬開閣樓的鎖，跟妹妹說去看看外面有什麼好玩的，然後把她送上一輛森林貨車——車上只坐得下一個人。他知道兩個都不見的話，那對夫妻會用盡一切辦法追查。<span class="src">結局後的回憶</span></li>
+    <li><b>安妮走了以後</b>「妮妮離開後，『朋友們』就出現了。」他變得不正常，於是被關起來。<span class="src">保險箱</span></li>
+    <li><b>二十一歲那天</b>關到這一天，他成為完整的、可以交付的實驗品。<span class="src">保險箱</span></li>
+    <li><b>2012 年</b>檔案室最上面那份病歷的年份。書架上那兩本筆記的主人姓李，叫李長樂。<span class="src">辦公桌／書架</span></li>
+    <li><b>2014 年 9 月 27 日</b>採購紀錄的最後一筆。石妃妮說：這日期跟阿布你來的時間好近喔。<span class="src">小隔間</span></li>
+    <li><b>十天前</b>贏黎清說你被送進來的時候他很為你擔心——你活著，但很露骨。李無憂用他身上的超級幹細胞把你補回完整健康。<span class="src">地下室</span></li>
+    <li><b>現在</b>實驗紀錄：01 人格融合肉體失敗、02 存活三十分鐘、03 成功但肉體變異；實驗體 009 生命特徵穩定，分裂人格速度過慢；注，細胞再生功能強，可提取樣本。培養罐旁邊那具身體，肉體年齡七歲，營養不足，預計安放人格「石妃妮」。<span class="src">地下室</span></li>
+  </ol>
+  <div class="col">
+    <p class="payoff">他們打算把「石妃妮」裝進一具七歲的身體。石妃妮是他被關起來以後才出現的人——真正的妹妹在十幾年前就上了那班貨車，而且沒有被抓回來。他在保險箱裡寫：那是我在「家」唯一開心的回憶。</p>
+  </div>
+</section>
+
 <section id="play">
-  <h2><span class="sn">5</span>想自己玩的人</h2>
+  <h2><span class="sn">7</span>想自己玩的人</h2>
   <div class="col">
     <p>原作在 <a href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">Larch 市集</a>，免登入就能玩。以下是讀完整份資料之後，覺得值得先知道的幾件事。</p>
     <p>另外，作者說完整攻略她自己會在 2026 年 9 月 20 日放到原作頁的留言區。要最權威的那一份，去那裡。</p>
@@ -324,7 +401,7 @@ footer a{color:var(--faint)}
 </section>
 
 <section id="thoughts">
-  <h2><span class="sn">6</span>讀完之後的感想</h2>
+  <h2><span class="sn">8</span>讀完之後的感想</h2>
   <p class="lede">為什麼我覺得這部值得你花一小時。下面每一段都是走完資料之後才看懂的。</p>
   <div class="col">
     <h3>第一場戲就把答案講完了</h3>
@@ -353,7 +430,7 @@ footer a{color:var(--faint)}
 </section>
 
 <section id="colophon">
-  <h2><span class="sn">7</span>資料來源與授權</h2>
+  <h2><span class="sn">9</span>資料來源與授權</h2>
   <div class="col">
     <p>Larch 市集上的公開作品可以用一個網址把整份專案資料拿下來，包含每一張卡片的文字、每一條連線、以及連線上的條件。這一頁的內容全部從那份資料生出來，沒有一句是手抄的，所以不會有漏掉或看錯的段落。</p>
     <p>做法是把 422 張卡片與 524 條連線還原成一張圖，從開場卡開始走：能一路直走的就接下去，遇到一個出口接多張卡的地方就是分歧。每張卡只會被放進一個段落，因此上面那份全文剛好把作品讀完一次，不多也不少。</p>
