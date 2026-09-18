@@ -38,6 +38,8 @@ nav .wrap::-webkit-scrollbar{display:none}
 nav b{font-family:var(--serif);font-weight:700;white-space:nowrap}
 nav a{font-size:.88rem;color:var(--faint);text-decoration:none;white-space:nowrap}
 nav a:hover{color:var(--ink)}
+nav .navplay{margin-left:auto;color:var(--ink);border:1px solid var(--seal);padding:.2rem .7rem}
+nav .navplay:hover{background:var(--seal-dim)}
 
 /* 病歷首屏 */
 header{position:relative;border-bottom:1px solid var(--rule);overflow:hidden}
@@ -164,6 +166,11 @@ figure img{width:100%;border:1px solid var(--rule)}
 .end ol li{margin-bottom:.55rem;line-height:1.6}
 .end.true{grid-column:1/-1;border-color:var(--seal-dim)}
 
+.playline{border-left:3px solid var(--seal);padding:.2rem 0 .2rem .9rem;margin:0 0 1rem}
+.playline a{text-decoration-thickness:1px}
+.readend{border:1px solid var(--seal-dim);background:linear-gradient(180deg,rgba(176,42,53,.12),transparent);
+  padding:1.2rem 1.25rem;margin:2.5rem 0 1rem;max-width:var(--measure)}
+.readend p{margin:0 0 .9rem}
 footer{padding:3rem 0 4rem;color:var(--faint);font-size:.9rem}
 footer a{color:var(--faint)}
 </style>
@@ -178,6 +185,7 @@ footer a{color:var(--faint)}
   <a href="#endings">九個結局</a>
   <a href="#play">想自己玩</a>
   <a href="#colophon">整理說明</a>
+  <a class="navplay" href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">去玩原作</a>
 </div></nav>
 
 <header>
@@ -254,6 +262,7 @@ footer a{color:var(--faint)}
 <section id="endings">
   <h2>九個結局</h2>
   <p class="lede">八個是在半路上停下來，一個走得完。每個結局在遊戲裡都只有一張圖，沒有台詞，所以下面寫的是圖上畫了什麼、以及怎麼走到那裡。</p>
+  <p class="playline"><a href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">九個結局的圖在原作裡是自己走出來的，去 Larch 玩一輪</a></p>
   <div class="ends" id="ends"></div>
 </section>
 
@@ -465,6 +474,15 @@ footer a{color:var(--faint)}
     var end = seg.end || {};
     if(end.kind === 'ending'){
       renderEndCard(end.node, host);
+      if(isMain){
+        var box = el('div','readend');
+        box.appendChild(el('p', null, '讀到這裡就是全部了。上面每一個分歧都可以展開，那是另外八個結局。'));
+        box.appendChild(el('p', null, '這一版是攤平的文字；原作有配樂、演出與小遊戲，而且結局是自己走出來的。'));
+        var a = el('a','btn','去 Larch 玩原作');
+        a.href = S.meta.playUrl; a.target = '_blank'; a.rel = 'noopener';
+        box.appendChild(a);
+        host.appendChild(box);
+      }
     } else if(end.kind === 'rejoin' && !isMain){
       host.appendChild(el('p','rejoin','這條路在這裡跟主線接回同一張卡，後面一樣。'));
     }
