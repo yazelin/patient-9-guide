@@ -236,6 +236,19 @@ def main():
                             "steps": path_to(e), "depth": dist(start, e)})
     ending_list.sort(key=lambda x: x["depth"])
 
+    # 「爬上天窗」有三個版本（只有你／帶著贏黎清／連龍傲天一起），全部接回同一段回憶和最後的預告圖。
+    # 作者的更新日誌寫「已有10幾種結局」，就是把這三個版本各算一個：8 個半路結束 + 3 個逃出去 = 11。
+    # 起點跟網站的章節一樣，用卡片 id 開頭手選；圖取天窗那一格的下一格。
+    ESCAPES = ["scene-6aba0484", "scene-396ecfd8", "scene-c84d46a6"]
+    variants = []
+    for pre in ESCAPES:
+        vid = next(n["id"] for n in board["nodes"] if n["id"].startswith(pre))
+        nxt = transitions(vid)
+        after = nodes[nxt[0][1]]["data"].get("background") if nxt else None
+        variants.append({"node": vid, "image": after or nodes[vid]["data"].get("background"),
+                         "steps": path_to(vid), "depth": dist(start, vid)})
+    variants.sort(key=lambda x: x["depth"])
+
     orphans = [n["id"] for n in board["nodes"] if n["id"] not in reachable]
     data = {
         "meta": {
@@ -246,9 +259,11 @@ def main():
             "publishedAt": doc.get("publishedAt"), "release": doc.get("releaseNumber"),
             "nodeCount": len(board["nodes"]), "edgeCount": len(board["edges"]),
             "trueEnding": TE[0],
+            "endingCount": len(ends) - 1 + len(variants),
         },
         "segments": segments,
         "endings": ending_list,
+        "variants": variants,
         "stats": {"claimed": len(claimed), "orphans": orphans, "endings": ends},
     }
     # 有跑過 tools/fetch_images.py 的話，圖改指到本地縮圖
@@ -275,7 +290,7 @@ def main():
                         it["video"] = it.pop("bg")
                 if (it.get("item") or {}).get("image"):
                     it["item"]["image"] = local(it["item"]["image"])[0]
-        for e in data["endings"]:
+        for e in data["endings"] + data["variants"]:
             if e.get("image"):
                 e["image"], e["imgw"], e["imgh"] = local(e["image"])
 
@@ -286,8 +301,9 @@ def main():
         f.write("window.STORY=")
         json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
         f.write(";\n")
-    print("卡片 %d 張；寫進 %d 張、走不到 %d 張；段落 %d 段、結局 %d 個"
-          % (len(board["nodes"]), len(claimed), len(orphans), len(segments), len(ends)))
+    print("卡片 %d 張；寫進 %d 張、走不到 %d 張；段落 %d 段；終點 %d 個、結局 %d 個（含天窗 %d 個版本）"
+          % (len(board["nodes"]), len(claimed), len(orphans), len(segments), len(ends),
+             data["meta"]["endingCount"], len(variants)))
     print("輸出：" + path)
 
 

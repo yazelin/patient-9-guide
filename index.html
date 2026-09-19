@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>三張床，六個人｜《第九號病人》讀本與全結局</title>
-<meta name="description" content="Larch 視覺小說《第九號病人》（作者 QIYUN）的完整讀本：不用玩也能從頭讀到尾，九個結局怎麼走、每個分歧點通往哪裡，全部攤開。">
+<meta name="description" content="Larch 視覺小說《第九號病人》（作者 QIYUN）的完整讀本：不用玩也能從頭讀到尾，十一個結局怎麼走、每個分歧點通往哪裡，全部攤開。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet">
@@ -36,8 +36,6 @@ a:hover{color:#fff}
 .spoiler p{margin:0;font-size:.9rem;color:#d7c6c2;max-width:52rem;line-height:1.7}
 .spoiler b{color:var(--seal);font-family:var(--serif);margin-right:.6em}
 .spoiler a{color:#fff}
-.stance-lead{font-family:var(--serif);font-weight:700;font-size:clamp(1.5rem,4.2vw,2.1rem);
-  line-height:1.35;margin:0 0 .8rem;max-width:26rem}
 .stance{max-width:32rem;margin:0 0 1.4rem;font-size:1.02rem;line-height:1.85;color:#d6ccc5}
 .stance a{color:#fff}
 .cta-lead{margin:0 0 2.6rem}
@@ -193,7 +191,9 @@ figure img{width:100%;border:1px solid var(--rule)}
 .end ol b{color:var(--ink);font-weight:500}
 .end ol .ctx{display:block;color:var(--faint)}
 .end ol li{margin-bottom:.55rem;line-height:1.6}
-.end.true{grid-column:1/-1;border-color:var(--seal-dim)}
+.end.good{border-color:var(--seal-dim)}
+.end.good:last-child{grid-column:1/-1}
+.ends .grp{grid-column:1/-1;margin:1.2rem 0 -.5rem;font-size:1.05rem;color:var(--faint);font-weight:500}
 
 .drawer{border:1px solid var(--rule);background:var(--chart);padding:1.1rem 1.25rem;margin:0 0 1.2rem;max-width:44rem}
 .drawer h3{margin:0 0 .6rem;font-size:1.1rem}
@@ -220,30 +220,32 @@ footer a{color:var(--faint)}
 <body>
 
 <div class="spoiler"><div class="wrap">
-  <p><b>防雷</b>下面全是雷：整個故事、九個結局、每一種死法，連最後那段回憶都攤開了。
-  這份讀本是寫給玩過的人看的。還沒玩過就<a href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">先上去走一遍</a>，免登入，一輪大概一小時，而且選錯路本來就是這款遊戲的內容。</p>
+  <p><b>防雷</b>這一頁會完整揭露劇情：整個故事、十一個結局、每一種死法，還有最後那段回憶。
+  還沒玩過的話，建議先<a href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">到 Larch 玩一輪</a>（免登入，約一小時，依結局線不同）。遊戲裡選錯會走到死亡結局，這是作品的設計。</p>
 </div></div>
 
 <nav><div class="wrap">
   <b>第九號病人</b>
   <a href="#about">這是什麼</a>
   <a href="#cast">人物</a>
-  <a href="#read">全文</a>
-  <a href="#drawers">三個抽屜</a>
-  <a href="#endings">九個結局</a>
+  <a href="#read">從頭讀</a>
+  <a href="#drawers">三處調查</a>
+  <a href="#endings">十一個結局</a>
   <a href="#timeline">009 的一生</a>
   <a href="#play">想自己玩</a>
   <a href="#thoughts">感想</a>
-  <a href="#colophon">資料來源</a>
+  <a href="#colophon">版權</a>
+  <a href="#repo">這個 repo</a>
   <a class="navplay" href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">去玩原作</a>
 </div></nav>
 
 <header>
   <div class="art" id="hero-art"></div>
   <div class="wrap">
-    <p class="stance-lead">好作品應該更容易被看見。</p>
-    <p class="stance">《第九號病人》是 <a href="https://larch.ink/@qiyundream" target="_blank" rel="noopener">QIYUN</a> 在 <a href="https://larch.ink/" target="_blank" rel="noopener">Larch</a> 上的視覺小說。
-    這一頁是為它做的收藏，存在的目的只有一個：讓更多人去玩它。</p>
+    <h1>第九號病人</h1>
+    <p class="byline">視覺小說　作者 <b><a href="https://larch.ink/@qiyundream" target="_blank" rel="noopener">QIYUN</a></b>　發表於 <a href="https://larch.ink/market" target="_blank" rel="noopener">Larch 市集</a>　<a href="https://larch.ink/creator-challenge" target="_blank" rel="noopener">第二屆創作者挑戰</a>參賽作</p>
+    <p class="stance">《第九號病人》是 <a href="https://larch.ink/@qiyundream" target="_blank" rel="noopener">QIYUN</a> 在 <a href="https://larch.ink/" target="_blank" rel="noopener">Larch</a> 上發表的視覺小說。
+    這一頁把整部作品整理成可以從頭讀完的文字，並附上十一個結局的走法。</p>
     <p class="cta-lead"><a class="btn" id="play-link" href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">去 Larch 玩《第九號病人》</a></p>
 
     <blockquote class="hook">
@@ -251,32 +253,32 @@ footer a{color:var(--faint)}
       <p class="hn">房裡有六個人。三張床，剛好夠睡。</p>
     </blockquote>
 
-    <h1>第九號病人</h1>
-    <p class="byline">視覺小說　作者 <b><a href="https://larch.ink/@qiyundream" target="_blank" rel="noopener">QIYUN</a></b>　發表於 <a href="https://larch.ink/market" target="_blank" rel="noopener">Larch 市集</a>　<a href="https://larch.ink/market?section=challenge&amp;challenge=creator-challenge-2026-09" target="_blank" rel="noopener">第二屆創作者挑戰</a>參賽作</p>
     <div class="file">
       <dl>
-        <dt>姓名</dt><dd>不詳，同房的人叫他「阿布」</dd>
+        <dt>姓名</dt><dd>安寧（同房的人叫他「阿布」）</dd>
         <dt>編號</dt><dd>實驗體 009</dd>
-        <dt>入院</dt><dd>十天前，被「採購」進來</dd>
-        <dt>主訴</dt><dd>醒來時失去記憶，想不起自己為什麼在這裡</dd>
+        <dt>入院</dt><dd>幻曆 2014/9/26，被「採購」進來</dd>
+        <dt>醒來時</dt><dd>失去記憶，想不起自己為什麼在這裡</dd>
         <dt>檔案室那天</dt><dd>2014 年 9 月 27 日</dd>
         <div class="sep"></div>
-        <dt>病歷頁數</dt><dd id="stat-nodes">422 張卡片</dd>
+        <dt>作品規模</dt><dd><span id="stat-nodes">422</span> 張卡片（遊戲裡一個畫面或一段對話算一張）</dd>
         <dt>分歧</dt><dd>13 處會改變去向</dd>
-        <dt>結局</dt><dd>9 個</dd>
-        <dt>讀完約需</dt><dd>25 分鐘</dd>
+        <dt>結局</dt><dd>11 個（8 個半路結束、3 個逃出天窗）</dd>
+        <dt>讀完本頁</dt><dd>約 25 分鐘</dd>
+        <dt>玩一輪</dt><dd>約 1 小時，依結局線不同</dd>
       </dl>
     </div>
     <ol class="hero-toc">
       <li><a href="#about"><span>1</span>這是一款什麼樣的作品</a></li>
       <li><a href="#cast"><span>2</span>你會遇到的人</a></li>
-      <li><a href="#read"><span>3</span>全文：從入院到天窗</a></li>
-      <li><a href="#drawers"><span>4</span>檔案室的三個抽屜</a></li>
-      <li><a href="#endings"><span>5</span>九個結局</a></li>
+      <li><a href="#read"><span>3</span>從頭讀：從入院到天窗</a></li>
+      <li><a href="#drawers"><span>4</span>檔案室的三處調查</a></li>
+      <li><a href="#endings"><span>5</span>十一個結局</a></li>
       <li><a href="#timeline"><span>6</span>把 009 的一生拼回去</a></li>
       <li><a href="#play"><span>7</span>想自己玩的人</a></li>
       <li><a href="#thoughts"><span>8</span>讀完之後的感想</a></li>
-      <li><a href="#colophon"><span>9</span>資料來源與授權</a></li>
+      <li><a href="#colophon"><span>9</span>這是誰的作品</a></li>
+      <li><a href="#repo"><span>10</span>這個 repo 在做什麼（與作品無關）</a></li>
     </ol>
   </div>
 </header>
@@ -285,27 +287,27 @@ footer a{color:var(--faint)}
 
 <section id="about">
   <h2><span class="sn">1</span>這是一款什麼樣的作品</h2>
-  <p class="lede">這一頁是我替這款作品做的收藏。原作還在線上，隨時可以玩。</p>
+  <p class="lede">「失去記憶的你，在一間陌生的精神病院醒來。」（作者的簡介）</p>
   <div class="col">
-    <p>《第九號病人》是 <a href="https://larch.ink/@qiyundream" target="_blank" rel="noopener">QIYUN</a> 做的視覺小說，2026 年 9 月 18 日上架 <a href="https://larch.ink/market" target="_blank" rel="noopener">Larch 市集</a>，<a href="https://larch.ink/market?section=challenge&amp;challenge=creator-challenge-2026-09" target="_blank" rel="noopener">第二屆創作者挑戰</a>參賽作。你醒在一間偏鄉精神病院，不記得自己是誰；同房的人有的太熱情、有的太暴躁、有的自稱修仙宗主。玩下去會發現，這裡不是醫院。</p>
-    <p>規模是 422 張卡、524 條連線、九個結局，全部在十四天的限時創作裡做完。</p>
-    <p>它值得更多人看到。九個結局裡有八個會讓你在半路停下來，所以有些人不會走到最後那段回憶。這一頁把整部作品攤平了：主線從頭到尾照順序讀下來，遇到分歧的地方停一下，想看別條路就展開，看完會告訴你那一條通到哪裡。九個結局的圖與走法另外列一份。</p>
-    <p>全作八千多字，讀完大約二十五分鐘。讀完覺得好看的話，<a href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">回去玩一輪</a>，按個喜歡、留一句話給作者。這一頁的字是死的，她做的那個有畫面、有配樂，還會在你選錯的時候把你弄死。</p>
+    <p>《第九號病人》是 <a href="https://larch.ink/@qiyundream" target="_blank" rel="noopener">QIYUN</a> 做的視覺小說，2026 年 9 月 18 日上架 <a href="https://larch.ink/market" target="_blank" rel="noopener">Larch 市集</a>，是 <a href="https://larch.ink/creator-challenge" target="_blank" rel="noopener">第二屆創作者挑戰</a>的參賽作，活動規定在兩週內完成創作。你要在病院裡尋找病例、破解謎題，一路避開千奇百怪的死亡結局。同房的人有的熱情、有的暴躁、有的自稱修仙宗主；玩下去你會開始懷疑，這裡真的是精神病院嗎？</p>
+    <p>規模是 422 張卡片、524 條連線、十一個結局，全文八千多字。卡片是遊戲裡的一個畫面或一段對話，連線是卡片之間的走向。</p>
+    <p>十一個結局裡，有八個會讓你在半路結束；另外三個是從天窗逃出去的不同版本（只有你、帶著贏黎清、連龍傲天一起），這三個都會走到最後那段回憶。每個結局的圖與走法，列在<a href="#endings">第 5 節</a>。</p>
+    <p>讀完覺得有興趣，歡迎到 Larch <a href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">玩一輪</a>，按個喜歡、留言支持作者。原作有畫面、配樂與角色演出，體驗比文字完整；還有很多奇怪的死亡結局，遇到選項要謹慎，不然可能就會……</p>
     <p class="note">再提醒一次：下面全部都是劇透。想自己玩就先去玩，<a href="#play">這裡有給玩家的提醒</a>。</p>
   </div>
 </section>
 
 <section id="cast">
   <h2><span class="sn">2</span>你會遇到的人</h2>
-  <p class="lede">先照他們自我介紹的樣子列。</p>
+  <p class="lede">個性與病情依作者提供的設定整理；沒有明說的地方寫「不詳」。</p>
   <div class="cast">
-    <div><h4>阿布（你）</h4><p>新來的病人。說不出自己的名字，於是被李無憂叫成「阿布」。檔案室那份病歷上，他的名字裡沒有「布」，病情寫得很嚴重。</p></div>
-    <div><h4>李無憂</h4><p>第一個來打招呼的人，把病院稱作「我們小家庭」，跟護士很熟。所有人裡最客氣的一個。</p></div>
-    <div><h4>石妃妮</h4><p>室友，會用迴紋針開鎖。姐姐在半夜不見了，整部作品都在找她。</p></div>
-    <div><h4>石妃仁</h4><p>妮妮的姐姐。有巨物恐懼症，發作起來會在牆角扭曲地爬。</p></div>
-    <div><h4>甄時</h4><p>另一個室友。嫌床髒、嫌人吵，動手比說話快。</p></div>
-    <div><h4>龍傲天</h4><p>自稱合歡宗宗主，開口閉口「本座」，逢人就收徒。全作最吵，也最重要。</p></div>
-    <div><h4>護士</h4><p>帶你進病房、發藥、在你發作時打鎮定劑的人。她說三個人擠一間房，可是房裡有六個人，遊戲讓你在心裡吐槽一句「這護士長得挺正常，結果數學卻不太好的樣子」。</p></div>
+    <div><h4>阿布（你）／安寧</h4><p>新來的病人，抗拒說出自己的名字，於是被李無憂叫成「阿布」。病情：幻想症、人格分裂。檔案室那份病歷上，他的名字裡沒有「布」，病情寫得很嚴重。</p></div>
+    <div><h4>李無憂</h4><p>看起來最正常，也是最客氣的一個。第一個來打招呼，把病院稱作「我們小家庭」，跟護士很熟；不過對於這裡的歸屬感，似乎有不同的定義。病情：不詳。</p></div>
+    <div><h4>石妃妮</h4><p>開朗的小女孩，天然呆，心智年齡不高的樣子，會用迴紋針開鎖。姐姐在半夜不見了，整部作品都在找她。病情：不詳。</p></div>
+    <div><h4>石妃仁</h4><p>妮妮的姐姐，比較陰鬱，自我認同度不高。病情：巨物恐懼症，發作起來會在牆角扭曲地爬。</p></div>
+    <div><h4>甄時</h4><p>暴躁，疑似有潔癖：嫌床髒、嫌人吵，動手比說話快。病情：不詳（疑似強迫症）。</p></div>
+    <div><h4>龍傲天</h4><p>活在自我世界的人，自稱合歡宗宗主，開口閉口「本座」，逢人就收徒。某些時候很極端，但人其實不壞。病情：重度幻想症。全作最吵，也最重要。</p></div>
+    <div><h4>護士</h4><p>帶你進病房、發藥、在你發作時打鎮定劑的人，看起來是李無憂的手下。她說三個人擠一間房，可是房裡有六個人，遊戲讓你在心裡吐槽一句「這護士長得挺正常，結果數學卻不太好的樣子」。</p></div>
     <div><h4>贏黎清</h4><p>在最後才出場的人。你找到他的時候，他泡在地下室的培養罐裡。</p></div>
   </div>
 
@@ -314,14 +316,14 @@ footer a{color:var(--faint)}
     <div class="col">
       <p>作者在作品的角色設定裡替每個人標了身分：<b>甄時、石妃仁、石妃妮</b> 後面都掛著「幻想」，<b>龍傲天</b> 掛的是「真人」。護士與李無憂沒有標，從劇情看他們是真的。</p>
       <p>正文裡也留了記號。你以為自己在群毆，龍傲天問的是「為什麼對著空氣揮拳」；甄時了結護士之後，李無憂喊的是：「實驗體009，你想起來了？你現在是誰？安寧？雙胞胎？甄時？」</p>
-      <p>孤兒院那一段給了名字的由來。八號與九號是龍鳳胎，被一對有錢夫妻領養之後仍然只有編號，於是八號替兩個人取了名字：她叫安妮，弟弟叫安寧。後來安寧騙妹妹上了貨車，自己留下來承受追查。「妮妮離開後，『朋友們』就出現了。」</p>
+      <p>孤兒院那一段給了名字的由來。八號與九號是龍鳳胎，被一對有錢夫妻領養之後仍然只有編號，於是八號替兩個人取了名字：她叫安妮，九號叫安寧，安妮喊他「哥哥」。後來安寧騙妹妹上了貨車，自己留下來承受追查。「妮妮離開後，『朋友們』就出現了。」</p>
       <p>房裡三張床要睡六個人，是因為其中三個不佔位子。</p>
     </div>
   </details>
 </section>
 
 <section id="read">
-  <h2><span class="sn">3</span>全文：從入院到天窗</h2>
+  <h2><span class="sn">3</span>從頭讀：從入院到天窗</h2>
   <p class="lede">主線照順序排。分歧點會標出這一版走了哪一條，其他選項可以就地展開。</p>
   <ul class="toc" id="toc"></ul>
   <div id="reader"></div>
@@ -329,8 +331,8 @@ footer a{color:var(--faint)}
 
 
 <section id="drawers">
-  <h2><span class="sn">4</span>檔案室的三個抽屜</h2>
-  <p class="lede">石妃妮問你要搜哪邊：辦公桌、書架、小隔間。你只能挑一個，挑完就接回同一條路——所以玩一輪，你手上永遠只有三分之一的線索。三個抽屜的內容都在下面。</p>
+  <h2><span class="sn">4</span>檔案室的三處調查</h2>
+  <p class="lede">石妃妮問你要搜哪邊：辦公桌、書架、小隔間。你只能挑一個，挑完就接回同一條路——所以玩一輪，你手上永遠只有三分之一的線索。三處調查的內容都在下面。</p>
 
   <div class="drawer">
     <h3>辦公桌：一疊病歷</h3>
@@ -353,13 +355,13 @@ footer a{color:var(--faint)}
     <p class="clue">這條路沒有列疑點，石妃妮直接把話說完了：「我們是…豬仔？那姐姐她…」</p>
   </div>
 
-  <p class="col payoff">三個抽屜要合起來看，才看得出這家人姓什麼：筆記的主人姓李，房間角落擺著李無憂小時候的兔子，而那個保險箱，最後是用李無憂身上的東西打開的。</p>
+  <p class="col payoff">三處調查要合起來看，才看得出這家人姓什麼：筆記的主人姓李，房間角落擺著李無憂小時候的兔子，而那個保險箱，最後是用李無憂身上的東西打開的。</p>
 </section>
 
 <section id="endings">
-  <h2><span class="sn">5</span>九個結局</h2>
-  <p class="lede">八個是在半路上停下來，一個走得完。九個結局在遊戲裡都用一張圖收尾，所以下面寫的是圖上畫了什麼、以及怎麼走到那裡。</p>
-  <p class="playline"><a href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">九個結局的圖在原作裡是自己走出來的，去 Larch 玩一輪</a></p>
+  <h2><span class="sn">5</span>十一個結局</h2>
+  <p class="lede">八個會在半路結束，三個是逃出天窗的不同版本，都會走到最後那段回憶。每個結局在遊戲裡都用一張圖收尾，所以下面寫的是圖上畫了什麼、以及怎麼走到那裡。</p>
+  <p class="playline"><a href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">十一個結局的圖在原作裡是自己走出來的，去 Larch 玩一輪</a></p>
   <div class="ends" id="ends"></div>
 </section>
 
@@ -388,13 +390,13 @@ footer a{color:var(--faint)}
   <h2><span class="sn">7</span>想自己玩的人</h2>
   <div class="col">
     <p>原作在 <a href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">Larch 市集</a>，免登入就能玩。以下是讀完整份資料之後，覺得值得先知道的幾件事。</p>
-    <p>玩完覺得好看，回原作頁按個喜歡、留一句話給她，那比什麼都有用。她的其他動態在 <a href="https://larch.ink/@qiyundream" target="_blank" rel="noopener">QIYUN 的作者頁</a>；同一屆挑戰賽的其他作品在 <a href="https://larch.ink/market?section=challenge&amp;challenge=creator-challenge-2026-09" target="_blank" rel="noopener">挑戰賽專區</a>，一起看完再投喜歡。</p>
+    <p>玩完覺得好看，回原作頁按個喜歡、留一句話給作者，那比什麼都有用。作者的其他動態在 <a href="https://larch.ink/@qiyundream" target="_blank" rel="noopener">QIYUN 的作者頁</a>；同一屆挑戰賽的其他作品在 <a href="https://larch.ink/market?section=challenge&amp;challenge=creator-challenge-2026-09" target="_blank" rel="noopener">挑戰賽專區</a>，一起看完再投喜歡。</p>
     <h3>道具要自己從背包點出來用</h3>
-    <p>卡片上寫著「點擊背包使用迴紋針1」的時候，它在等你開背包：按右上角的背包、選那件道具、按使用，劇情就接下去。全作有六件道具這樣用：迴紋針兩支、手術刀、膠帶、李無憂的手指、李無憂的指紋。另外還有一件「李無憂的小金庫」，拿了就是拿了，不用使用。</p>
+    <p>卡片上寫著「點擊背包使用迴紋針1」的時候，它在等你開背包：按右上角的背包、選那件道具、按使用，劇情就接下去。全作有六件道具這樣用：迴紋針兩支、手術刀、膠帶、李無憂的手指、李無憂的指紋。另外還有一件「李無憂的小金庫」，拿了就是拿了，不用使用。背包系統是這一屆挑戰鼓勵使用的玩法之一（用了會加分，不是強制）。</p>
     <h3>三個小遊戲</h3>
     <p>去李無憂床後面找迴紋針那一關是手速挑戰，卡片前一句會提醒你準備。另外兩個分別在採集指紋與甄時對上李無憂的時候，其中一個可以按略過。</p>
     <h3>會死的地方就那幾個</h3>
-    <p>大部分選項是讓你挑要怎麼吐槽，那是這部作品最好笑的地方，講什麼都接得回去。會改變去向的是十三個分歧，其中八個會把你停在某個結局，全部列在<a href="#endings">上面那份結局表</a>。想一次走到真結局，照那張表倒著看最快。</p>
+    <p>大部分選項是讓你挑要怎麼吐槽，那是這部作品最好笑的地方，講什麼都接得回去。會改變去向的是十三個分歧，其中八個會把你停在某個結局，全部列在<a href="#endings">上面那份結局表</a>。想一次走到最後那段回憶，照那張表倒著看最快。</p>
     <h3>存檔</h3>
     <p><a href="https://larch.ink/" target="_blank" rel="noopener">Larch</a> 的存檔是手動的，在底欄。走到會分岔的地方先存一格，看完一個結局就讀回來，比從頭再來快得多。</p>
   </div>
@@ -416,30 +418,41 @@ footer a{color:var(--faint)}
     <h3>龍傲天是這部作品最好的設計</h3>
     <p>他是角色設定裡唯一標著「真人」的病友。前面三分之一你會覺得他只是個吵鬧的笑點，後半段能真的幫上忙的卻只有他：膠帶那條路要靠他把陷阱鋪在餐廳地上。而你在走廊上決定要不要告訴他的那一刻，就決定了故事走不走得完——瞞著他，畫面停在一條空無一人的長廊，那是第八個結局。</p>
     <p>最漂亮的是贏黎清那兩句。你帶著龍傲天走到地下室，他說「他人不壞可以帶走他」；你沒帶他來，同一個人說的是「他不會離開的，畢竟這裡是他的宗門」。兩種答案，差別在你有沒有把那個吵鬧的人當人看。</p>
-    <p>最後那張圖也跟著變：帶著他逃出去的版本，畫面上有四個人在月光下飛。換另一條路（讓甄時動手拿到手指），真結局一樣到得了，但圖上只有你，或是你跟贏黎清兩個人。</p>
+    <p>逃出天窗之後的那一格也跟著變：帶著他們一起走的版本，畫面上有四個人騎著劍在月光下飛。走另一條路（讓甄時動手拿到手指），一樣到得了最後那段回憶，圖卻是一個人走在通往城堡的夜路上。</p>
 
     <h3>保險箱打開的那幾秒</h3>
-    <p>保險箱打開的那幾秒是一段影片，整部作品只有這裡這樣做。接得很順——這件事我私訊跟作者說過。</p>
+    <p>保險箱打開的那幾秒是一段影片，整部作品只有這裡這樣做，接得很順。</p>
 
     <h3>十四天</h3>
-    <p>玩到最後會看到作者的話：這是一款在十四天限時創作中誕生的小遊戲。422 張卡、九個結局、五十幾張插圖、三個小遊戲、一段保險箱打開的影片，全部在兩個禮拜裡做完。</p>
+    <p>玩到最後會看到「團隊作者的話」：這是一款在 14 天限時創作中誕生的小遊戲。這 14 天是<a href="https://larch.ink/creator-challenge" target="_blank" rel="noopener">第二屆創作者挑戰</a>的規定（9 月 6 日至 21 日，兩週）。422 張卡片、十一個結局、五十幾張插圖、三個小遊戲、一段保險箱打開的影片，全部在這兩週裡做完。</p>
 
-    <p>結局那張圖寫著「你以為 009 的故事已經結束了嗎」，下面是完整版的製作計畫。我想看那個完整版，所以這一頁的每一節都有回去玩的入口。<a href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">去玩一輪，按個喜歡</a>，那比什麼都有用。</p>
-
-    <h3>同一屆我還喜歡另一部</h3>
-    <p>陳怡珊的 <a href="https://larch.ink/play/market/b1ce07d9-39f7-429b-8466-9ab6b3778c38" target="_blank" rel="noopener">《鴨子探索：是誰？》</a>，一群鴨子裡混進一個人類，查一件沒人願意講清楚的事。第二章那本日記整本讀下來很不好受。我也替它做了一頁：<a href="https://yazelin.github.io/duck-who/" target="_blank" rel="noopener">被撕掉的那幾頁</a>。</p>
+    <p>結局那張圖寫著「你以為，009 的故事已經結束了嗎？」，下面是完整版的製作計畫。想看完整版的話，<a href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">去玩一輪，按個喜歡</a>，那比什麼都有用。</p>
   </div>
 </section>
 
 <section id="colophon">
   <h2><span class="sn">9</span>這是誰的作品</h2>
   <div class="col">
-    <p>《第九號病人》的故事、角色、台詞與全部插圖都是 <a href="https://larch.ink/@qiyundream" target="_blank" rel="noopener">QIYUN</a> 的。作品本身公開在 <a href="https://larch.ink/market" target="_blank" rel="noopener">Larch 市集</a> 上，免登入就能玩；這一頁是照著那個公開版本做的收藏，不是原作，也不隸屬於作者或 <a href="https://larch.ink/" target="_blank" rel="noopener">Larch</a> 平台。她說一聲，我隨時改或撤掉。</p>
-    <p>收的時候沒有憑印象寫：上面每一句台詞、每一個選項、每一條分歧，都對著作品本身核對過，所以不會有記錯或漏掉的段落。九個結局的走法也是照作品裡實際的接法整理的，只列出非這樣選不可的那幾步。</p>
+    <p>《第九號病人》的故事、角色、台詞與全部插圖都是 <a href="https://larch.ink/@qiyundream" target="_blank" rel="noopener">QIYUN</a> 的。作品本身公開在 <a href="https://larch.ink/market" target="_blank" rel="noopener">Larch 市集</a> 上，免登入就能玩；這一頁是照著那個公開版本做的收藏，不是原作，也不隸屬於作者或 <a href="https://larch.ink/" target="_blank" rel="noopener">Larch</a> 平台。作者若有任何要求，隨時修改或撤下。</p>
+  </div>
+</section>
+
+<section id="repo">
+  <h2><span class="sn">10</span>這個 repo 在做什麼？</h2>
+  <p class="lede">以下與作品無關，是這個網站怎麼來、怎麼做的紀錄。</p>
+  <div class="col">
+    <h3>為什麼做這一頁</h3>
+    <p>好作品應該更容易被看見。《第九號病人》要一直點、一直選，選錯就死，所以有些人不會走到最後那段回憶。這一頁把整部作品整理成可以從頭讀完的文字，讓他們也看得完，然後回去玩原作。</p>
+    <h3>內容怎麼收的</h3>
+    <p>《第九號病人》公開在 Larch 市集上，免登入就能玩。這一頁的每一句台詞、每一個選項、每一條分歧，都對著那個公開版本核對過，不是憑印象寫的。各結局的走法照作品裡實際的接法整理，只列出非這樣選不可的那幾步。人物簡介與入院日期，則依作者對本頁的意見補充。</p>
+    <p>結局怎麼數：作品裡有 9 張走得到的終點卡，但「爬上天窗」分成三個版本（只有你、帶著贏黎清、連龍傲天一起），全部接回同一段回憶。作者的更新日誌寫「已有10幾種結局」，所以這裡算 11 個：8 個半路結束，加 3 個逃出天窗。</p>
+    <p>「讀完本頁約 25 分鐘」與「玩一輪約 1 小時」是整理者的估計，不是原作的數字。</p>
     <h3>圖</h3>
-    <p>插圖用的是縮到寬 1000 的副本。原檔一張約 2 MB、五十幾張加起來超過 100 MB，直接連她的圖床會讓讀者跟她的主機一起受累。原始網址都留著，記在 <code>img/sources.json</code>。</p>
-    <h3>想看怎麼做的</h3>
-    <p>整理用的小程式跟這一頁的原始碼都放在同一個 <a href="https://github.com/yazelin/patient-9-guide" target="_blank" rel="noopener">repo</a> 裡。</p>
+    <p>插圖是縮小為寬 1000 像素的副本（合計約 4 MB），畫質比原作低。原檔一張約 2 MB、五十多張合計超過 100 MB，所以沒有直接放。想看解析度較高的原圖，請到 Larch 的原作頁。每張圖的原始網址記錄在 <code>img/sources.json</code>。</p>
+    <h3>怎麼做的</h3>
+    <p>整理用的小程式跟這一頁的原始碼都放在同一個 <a href="https://github.com/yazelin/patient-9-guide" target="_blank" rel="noopener">repo</a> 裡，製作紀錄在 <code>docs/</code>。</p>
+    <h3>其他頁面</h3>
+    <p><a href="https://yazelin.github.io/duck-who/" target="_blank" rel="noopener">《鴨子探索：是誰？》讀本</a></p>
   </div>
 </section>
 
@@ -448,7 +461,7 @@ footer a{color:var(--faint)}
 <footer class="wrap">
   <p>《第九號病人》的故事、角色與全部插圖版權屬於原作者 <a href="https://larch.ink/@qiyundream" target="_blank" rel="noopener">QIYUN</a>。這裡是一份讀者整理的讀本與攻略，不是原作，也不隸屬於作者或 <a href="https://larch.ink/" target="_blank" rel="noopener">Larch</a> 平台。<br>
   原作在這裡：<a href="https://larch.ink/play/market/e1519bf9-dbc8-4830-9873-3ae50416d955" target="_blank" rel="noopener">larch.ink／第九號病人</a>　作者：<a href="https://larch.ink/@qiyundream" target="_blank" rel="noopener">QIYUN</a>　參賽單元：<a href="https://larch.ink/market?section=challenge&amp;challenge=creator-challenge-2026-09" target="_blank" rel="noopener">第二屆創作者挑戰</a></p>
-  <p>資料取自作品的公開發佈快照，整理工具與原始碼放在同一個 repo。</p>
+  <p>整理：林亞澤</p>
 </footer>
 
 <script src="data/story.js"></script>
@@ -459,7 +472,7 @@ footer a{color:var(--faint)}
   var segs = {}; S.segments.forEach(function(s){segs[s.id]=s;});
 
   document.getElementById('hero-art').style.backgroundImage = 'url("'+S.meta.cover+'")';
-  document.getElementById('stat-nodes').textContent = S.meta.nodeCount + ' 張卡片';
+  document.getElementById('stat-nodes').textContent = S.meta.nodeCount;
 
   // 章節：手選的段落起點
   var CHAPTERS = [
@@ -510,8 +523,17 @@ footer a{color:var(--faint)}
       n:'少了一個人',
       d:'龍傲天走過來問你在幹什麼，你選擇不告訴他。畫面是空無一人的長廊——後面那段要靠他才走得下去。'},
     'scene-96122423-6d3a-4f2a-9a98-20b103d55e05':{
-      n:'Happy Ending：009 的故事還沒結束',
-      d:'保險箱開了，裡面是實驗體 009 的紀錄，也就是你自己的。書架旁有暗門，暗門後面是培養罐與實驗紀錄：預計安放人格「石妃妮」。你帶著贏黎清、龍傲天與那筆錢從天窗離開，回憶跟著回來——孤兒院的八號與九號，安妮與安寧。最後一張圖是續作預告，上面寫著完整版製作計畫。拿指紋那一步有兩條路都走得到這裡：找機會拿到李無憂的手指（甄時會出手），或是用膠帶採集指紋——走膠帶那條的話，龍傲天問你在做什麼的時候一定要告訴他，瞞著他就會停在第八個結局。'}
+      n:'最後那段回憶：009 的故事還沒結束',
+      d:'三個逃出天窗的版本都接到這裡：孤兒院的八號與九號，安妮與安寧。最後一張圖是續作預告，上面寫著完整版製作計畫。'},
+    'scene-6aba0484-cce5-4326-8023-8a5f229637a4':{
+      n:'一個人逃出天窗',
+      d:'保險箱開了，裡面是實驗體 009 的紀錄，也就是你自己的。書架旁有暗門，暗門後面是培養罐與實驗紀錄：預計安放人格「石妃妮」。你靠甄時拿到的李無憂的手指開了保險箱，卻不管培養罐裡的贏黎清，一個人爬上天窗。畫面是一個人走在通往城堡的夜路上。之後回憶跟著回來：孤兒院的八號與九號，安妮與安寧。'},
+    'scene-396ecfd8-d6a1-454d-829c-792c055b77d6':{
+      n:'帶著贏黎清逃出天窗',
+      d:'前面一樣靠甄時拿到李無憂的手指，這一次你打開培養罐救出贏黎清，跟他一起爬上天窗。畫面同樣是一個人走在通往城堡的夜路上。之後接上同一段回憶。'},
+    'scene-c84d46a6-3c70-4e10-8066-957ed436094e':{
+      n:'帶著大家逃出天窗',
+      d:'你用膠帶採集指紋，還帶著龍傲天一起走到地下室。救出贏黎清之後，你們一起從天窗離開，畫面上四個人騎著劍在月光下飛。之後接上同一段回憶。走膠帶這條的話，龍傲天問你在做什麼的時候一定要告訴他，瞞著他就會停在第八個結局。'}
   };
 
   var NAMES = ['李無憂','石妃妮','石妃仁','甄時','龍傲天','護士','贏黎清','玩家','阿布','？？？','???'];
@@ -634,7 +656,7 @@ footer a{color:var(--faint)}
       renderEndCard(end.node, host);
       if(isMain){
         var box = el('div','readend');
-        box.appendChild(el('p', null, '讀到這裡就是全部了。上面每一個分歧都可以展開，那是另外八個結局。'));
+        box.appendChild(el('p', null, '讀到這裡是其中一個結局。上面每一個分歧都可以展開，那是另外十個結局。'));
         box.appendChild(el('p', null, '這一版是攤平的文字；原作有配樂、演出與小遊戲，而且結局是自己走出來的。'));
         var a = el('a','btn','去 Larch 玩原作');
         a.href = S.meta.playUrl; a.target = '_blank'; a.rel = 'noopener';
@@ -716,10 +738,9 @@ footer a{color:var(--faint)}
 
   // 結局一覽
   var ends = document.getElementById('ends');
-  S.endings.forEach(function(e, i){
+  function endCard(e, i, cls){
     var info = ENDINGS[e.node] || {n:'結局', d:''};
-    var isTrue = e.node === S.meta.trueEnding;
-    var card = el('div','end' + (isTrue ? ' true' : ''));
+    var card = el('div','end' + (cls ? ' ' + cls : ''));
     if(e.image){
       var img = el('img'); img.src = e.image; img.loading='lazy'; img.alt='';
       if(e.imgw){ img.width = e.imgw; img.height = e.imgh; }
@@ -755,7 +776,13 @@ footer a{color:var(--faint)}
     }
     card.appendChild(body);
     ends.appendChild(card);
-  });
+  }
+  // 九張終點卡裡最後那張是三個逃出天窗版本共用的收尾，改由 S.variants 各自列出
+  var early = S.endings.filter(function(e){ return e.node !== S.meta.trueEnding; });
+  ends.appendChild(el('h3','grp','八個會在半路結束'));
+  early.forEach(function(e, i){ endCard(e, i, ''); });
+  ends.appendChild(el('h3','grp','三個逃出天窗，都會走到最後那段回憶'));
+  (S.variants || []).forEach(function(e, i){ endCard(e, early.length + i, 'good'); });
 })();
 </script>
 </body>
